@@ -65,10 +65,6 @@ resource "aws_s3_bucket_website_configuration" "example" {
     suffix = "index.html"
   }
 
-  error_document {
-    key = "error.html"
-  }
-
   routing_rule {
     condition {
       key_prefix_equals = "docs/"
@@ -78,3 +74,5 @@ resource "aws_s3_bucket_website_configuration" "example" {
     }
   }
 }
+
+
