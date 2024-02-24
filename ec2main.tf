@@ -8,6 +8,9 @@ resource "aws_instance" "cyf_backend" {
   instance_type = "t2.micro"  # Choose an instance type
   key_name      = "VideoStorage"  # Create an SSH key pair in AWS and specify the name
   security_groups = ["ec2_full_stack_project-security-group"]  # Create a security group in AWS and specify
+  tags = {
+    Name = "terraform-VideoStorage-app"
+  }
 
 }
 
