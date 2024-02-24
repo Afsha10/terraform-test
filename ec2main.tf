@@ -6,7 +6,7 @@ variable "ec2_full_stack_project" {
 resource "aws_instance" "cyf_backend" {
   ami           = "ami-0905a3c97561e0b69"  # Use an appropriate Ubuntu AMI ID
   instance_type = "t2.micro"  # Choose an instance type
-  key_name      = var.ec2_full_stack_project  # Create an SSH key pair in AWS and specify the name
+  key_name      = "VideoStorage"  # Create an SSH key pair in AWS and specify the name
   security_groups = ["ec2_full_stack_project-security-group"]  # Create a security group in AWS and specify
 
 }
