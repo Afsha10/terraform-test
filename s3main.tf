@@ -8,16 +8,16 @@ terraform {
 }
 
 variable "access_key" {
-    type = string
+  type = string
 }
 
 variable "secret_key" {
-    type = string
+  type = string
 }
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "eu-west-1"
+  region     = "eu-west-1"
   access_key = var.access_key
   secret_key = var.secret_key
 
